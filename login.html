@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="jquery-3.4.1.js"></script>
+  </head>
+  <body>
+    <section class="login-form">
+      <div>
+        <a href="www.naver.com" class="logo">
+          <h1 class="blind">사이트 이름</h1>
+        </a>
+      </div>
+      <form action="">
+        <div class="int-area">
+          <input
+            type="text"
+            name="id"
+            id="id"
+            placeholder="아이디"
+            title="아이디"
+            class="int-area"
+            maxlength="41"
+          />
+          <div class="int-area">
+            <input
+              type="password"
+              name="pw"
+              id="pw"
+              placeholder="비밀번호"
+              title="비밀번호"
+              class="int-area"
+              maxlength="41"
+              value
+            />
+        </div>
+        <div class="btn-area">
+          <button type="submit">로그인</button>
+        </div>
+      </form>
+      <ul class="find_wrap" id="find_wrap">
+        <li>
+          <a target="_blank" href="file:///C:/Users/tnfka/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/my%20website/find_id.html" class="find_text">아이디 찾기</a>
+        </li>
+        <li>
+          <a target="_blank" href="file:///C:/Users/tnfka/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/my%20website/find_pw.html" class="find_text">비밀번호 찾기</a>
+        </li>
+        <li>
+          <a target="_blank" href="www.naver.com" class="find_text">회원가입</a>
+        </li>
+      </ul>
+      <!--
+      <div class="caption">
+        <a href="">비밀번호 찾기</a>
+      </div>
+      <div class="caption">
+        <a href="">아이디 찾기</a>
+      </div>
+    </section>
+    -->
+<!-- 
+    <script>
+      let id = $('#id');
+      let pw = $('#pw');
+      let btn = $('#btn');
+
+      $(btn).on('click', function(){
+        if($(id).val() == "") {
+          $(id).next('label').addClass('warning');
+        }
+        else if($(pw).val() == "") {
+          $(id).next('label').addClass('warning');
+        }
+      })
+    </script> -->
+  </body>
+</html>

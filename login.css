@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.login-form {
+  position: relative;
+  z-index: 2;
+}
+.login-form h1 {
+  font-size: 32px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.int-area {
+  width: 400px;
+  position: relative;
+}
+.int-area input {
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+}
+.int-area label {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 18px;
+  color: #999;
+}
+
+.btn-area {
+  margin-top: 30px;
+}
+.btn-area button {
+  width: 100%;
+  height: 50px;
+  background: #166cea;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.caption {
+  margin-top: 20px;
+  width: 100%;
+  text-align: start;
+}
+.caption a {
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.find_wrap,
+.relogin_find_wrap {
+  padding: 15px 0 0px;
+  text-align: center;
+}
+
+#find_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.find_wrap li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul {
+  list-style: none;
+  color: #000;
+  text-align: center;
+}
+li {
+  display: list-item;
+  text-align: justify;
+  float: left;
+  margin-right: 20px;
+}
+.wrap {
+  position: relative;
+  height: 100%;
+  letter-spacing: -0.5px;
+}
+.logo {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: top;
+  background-position: 0 51px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100px;
+}
+a {
+  margin-top: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.box {
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 51px;
+  border: solid 1px #dadada;
+  padding: 10px 10px 10px 14px;
+  background: #fff;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.join_title {
+  margin: 0px 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.int {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 29px;
+  padding-right: 25px;
+  line-height: 29px;
+  border: none;
+  background-color: #fff;
+  font-size: 15px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.error_box {
+  display: none;
+  margin: 9px 0 -2px;
+  font-size: 12px;
+  line-height: 14px;
+  color: red;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.h3 {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}

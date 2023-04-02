@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #6cabdd;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+header .logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+header .nav-links a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+header .nav-links a:hover {
+  color: #42a5f5;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 3px;
+  padding: 0 3px; /* 크기를 3px만큼 줄임 */
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+header li a {
+  color: #fff;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+/* 메인 스타일 */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 타이틀 스타일 */
+.title {
+  background-color: #1c1f25;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title p {
+  font-size: 1.2rem;
+}
+
+/* 버튼 스타일 */
+.button {
+  display: flex;
+  background-color: #42a5f5;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.buttons-wrapper {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: #1c7cd6;
+}
+
+.main-article {
+  display: flex;
+  flex: 1;
+  margin-right: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  /* 이미지와 제목 사이의 간격을 조정합니다. */
+}
+
+.main-article-image {
+  width: 400px;
+  height: 300px;
+  margin-right: 10px;
+}
+
+.main-article-title {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.articles {
+  margin-bottom: 50px;
+}
+
+.sub-articles {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.sub-articles ul {
+  display: flex; /* 수정 */
+  flex-wrap: wrap; /* 수정 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-articles li {
+  position: relative;
+  flex: 1; /* 추가 */
+  margin: 0 10px;
+}
+
+.sub-articles li .img {
+  margin-bottom: 10px;
+}
+
+.sub-articles li img {
+  width: 100%;
+  display: block;
+}
+
+.sub-articles li a {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  /* 제목 폰트 크기와 줄 간격을 조정합니다. */
+}
+.sub-articles li::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+}
+
+.sub-articles li:last-child::after {
+  display: none;
+}
+
+.sub-articles li img {
+  width: 100%;
+  display: block;
+}
+
+.sub-articles li h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.sub-articles .img {
+  width: 200px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+/* 섹션 스타일 */
+section {
+  margin-top: 40px;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section li {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+section li a {
+  color: #424242;
+  text-decoration: none;
+}
+
+section li a:hover {
+  color: #42a5f5;
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #1c1f25;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.2rem;
+}
+
+.navbar {
+  background-color: #0d2538;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons a {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.buttons a:hover {
+  background-color: #ddd;
+}
+
+.boards {
+  margin-top: 100px;
+}

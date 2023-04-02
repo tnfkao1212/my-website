@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="find_id.css">
+    <title>아이디 찾기</title>
+
+  </head>
+  <body class="whole_white">
+    <header id="header" role="banner" class="header">
+      <div class="header_logo">
+        <a href="javascript:;" onclick="gosite();">
+        <h1 class="logo">
+          <span class="blind">사이트 이름</span>
+        </h1>
+        </a>
+      </div>
+    </header>
+    <div id="container" class="container">
+      <form id="fm" name="fm" action="/user2/help/pwInquiry?m=actionInputUserId" method="post">
+        <div class="content">
+          <div class="find_wrap">
+            <div class="find_inner">
+              <div class="title_wrap">
+                <h2 class="title">
+                  찾고자하는
+                  <br>
+                  아이디를 입력해주세요.
+                </h2>
+              </div>
+
+              <div class="int-area">
+                <input
+                  type="text"
+                  name="id"
+                  id="id"
+                  placeholder="아이디"
+                  title="아이디"
+                  class="int-area"
+                  maxlength="41"
+                  value
+                />
+              </div>
+              <button type="button" class="btn_check" onclick="checkIdAndSubmit();">
+                <span class="text">다음</span>
+              </button>
+              <div class="link_wrap">
+                <a href="javascript:;" class="link" onclick="idInquiry();">
+                  <div class="txt">아이디 찾기</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("#idInput").focus(function() {
+              $("#idInputRow").addClass("focus");
+          });
+  
+          $("#idInput").blur(function() {
+              $("#idInputRow").removeClass("focus");
+          });
+  
+          $("#idInput").on("input", function() {
+              if ($("#idInput").val()) {
+                  $("#bulletDelete").show();
+                  $("#idIcon").addClass("on");
+              } else {
+                  $("#bulletDelete").hide();
+                  $("#idIcon").removeClass("on");
+              }
+          });
+  
+          $("#bulletDelete").click(function() {
+              $("#idInput").val("");
+              $("#bulletDelete").hide();
+              $("#idInput").focus();
+          });
+      });
+  
+      function checkIdAndSubmit() {
+          id = document.getElementById("idInput").value;
+          if(id == "" || id.length < 3){
+              alert("아이디를 정확하게 입력해 주세요");
+              document.getElementById("idInput").focus();
+              return false;
+          }
+          executeNclkForLogin();
+          document.fm.submit();
+      }
+  
+      function idInquiry(){
+          executeNclkForIdInquiry();
+              document.location.href = "/user2/help/idInquiry?menu=idinquiry";
+      }
+  
+      function executeNclkForLogin() {
+              nclk(this,'idi.next','','',event);
+      }
+  
+      function executeNclkForIdInquiry() {
+              nclk(this,'ihl.forgotid','','',event);
+      }
+  </script>
+  </body>
+</html>
