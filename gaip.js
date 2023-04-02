@@ -9,9 +9,23 @@ $(document).ready(function () {
 
   // blur 이벤트에 반응하여 input 요소에서 포커스가 벗어날 때마다 checkInputValue 함수 실행
   $('#id, #pswd1, #password, #email').on('blur', function () {
+    //밑에 빨간줄로 경고메세지 표기
+    // if(해당 필드의 데이터 Lengnth){
+
     checkInputValue($(this));
   });
 });
+
+$('#join-btn').click(function (event) {
+  event.preventDefault(); // 버튼의 기본 동작을 막음
+  checkInputValues();
+});
+
+//회원가입 버튼
+function clickRegister() {
+  //event.preventDefault(); // 버튼의 기본 동작을 막음
+  checkInputValues();
+}
 
 function checkInputValues() {
   var isValid = true;
@@ -19,14 +33,9 @@ function checkInputValues() {
   // 각 input 요소의 값이 올바르게 입력되었는지 확인하는 코드
 
   if (isValid) {
-    window.location.href = 'file:///C:/website.html';
+    window.location.href = 'index.html';
   }
 }
-
-$('#join-btn').click(function (event) {
-  event.preventDefault(); // 버튼의 기본 동작을 막음
-  checkInputValues();
-});
 // 비밀번호 확인 체크
 /*    if (input.attr('id') === 'password') {
       var pswd1 = $('#pswd1').val();

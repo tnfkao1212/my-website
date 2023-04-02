@@ -10,12 +10,14 @@
   <body>
     <section class="login-form">
       <div>
-        <a href="file:///C:/Users/tnfka/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/my%20website/website.html" class="logo">
+        <a href="index.html" class="logo">
           <h1 class="blind">회원 가입</h1>
         </a>
       </div>
       <!--
       <form action="/signup" method="post">-->
+        <!-- <form action="test.php" method="POST"> -->
+        <form method="POST">
         <div>
           <h3 class="join_title">
             <label for="name">아이디</label>
@@ -72,6 +74,20 @@
         </div>
         <div>
           <h3 class="join_title">
+            <label for="nick">닉네임</label>
+          </h3>
+          <span class="box int_nickname">
+            <input
+              type="text"
+              id="nickname"
+              name="nickname"
+              class="int"
+              title="NICKNAME"
+              maxlength="20"
+            />
+          </span>
+        <div>
+          <h3 class="join_title">
             <label for="email">이메일</label>
           </h3>
           <span class="box int_email">
@@ -91,7 +107,7 @@
           >
         </div>
         <div class="btn-area">
-          <button id="join-btn" type="submit">회원가입</button>
+          <button onclick="clickRegister()" id="join-btn" type="submit">회원가입</button>
         </div>
   </body>
 </html>
