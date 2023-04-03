@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>커뮤니티 사이트</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
   </head>
   <body>
     <!-- 헤더 영역 -->
@@ -27,10 +28,10 @@
       <div class="main-container">
         <!-- 수정: 타이틀을 변경 -->
         <div class="buttons">
-          <a href="자유 게시판/free_list.html">자유게시판</a>
           <!-- 수정: 각종 게시판으로 이동하는 버튼을 추가 -->
-          <a href="아프리카/af_list.html">아프리카</a>
-          <a href="트위치 게시판/tw_list.html">트위치</a>
+          <a onclick="clickBoard(1)">자유게시판</a>
+          <a onclick="clickBoard(2)">아프리카</a>
+          <a onclick="clickBoard(3)">트위치</a>
           <a href="#">추가 버튼</a>
           <a href="#">추가 버튼</a>
           <a href="#">추가 버튼</a>
