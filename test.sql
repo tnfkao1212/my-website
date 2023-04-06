@@ -9,3 +9,6 @@ CREATE table people(
  level tinyint(4),
  point varchar(120)
  );
+
+Insert into (tnfkao, tkddn1212!, tnfkao, tnfkao@naver.com);
+go

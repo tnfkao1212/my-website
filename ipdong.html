@@ -1,0 +1,31 @@
+<!-- 개인정보 수집 동의 -->
+<div class="userInput">
+  <h3 class="list">개인정보 수집/이용동의<span id="consentError"></span></h3>
+  <div id="informationConsent">
+    <span id="consentBox">
+      <h3>개인정보 처리방침<span id="consentError"></span></h3>
+      <!-- 세부내용 중략 -->
+    </span>
+  </div>
+  <label class="select"
+    ><input type="radio" id="check" name="check" value="동의" />동의</label
+  >
+  <label class="select"
+    ><input
+      type="radio"
+      id="noneCheck"
+      name="check"
+      value="비동의"
+      checked="checked"
+    />비동의</label
+  >
+</div>
+
+<!--    // 개인정보 동의박스 체크
+    var consentCheck = document.getElementById('check');
+    //console.log(consentCheck);
+    if (!consentCheck.checked) {
+      document.getElementById('consentError').innerHTML =
+        '개인정보 수집이용 동의를 해주세요.';
+      return false;
+    }-->

@@ -131,15 +131,16 @@ a {
 }
 
 .box {
+  margin: 0px auto;
   display: block;
-  position: relative;
-  width: 500px;
+  width: 100%;
   height: 51px;
-  border: solid 1px #dadada;
-  padding: 10px 10px 10px 14px;
+  padding-top: 10px;
+  padding-right: 110px;
+  padding-bottom: 10px;
+  padding-left: 14px;
   background: #fff;
   box-sizing: border-box;
-  outline: 0;
 }
 
 .join_title {
@@ -151,12 +152,12 @@ a {
 
 .int {
   display: block;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 29px;
   padding-right: 25px;
   line-height: 29px;
-  border: none;
+  border: solid 1px #dadada;
   background-color: #fff;
   font-size: 15px;
   box-sizing: border-box;
@@ -177,4 +178,21 @@ a {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: none;
+  text-align: left;
+}
+
+.list {
+  margin: 10px 20px 0;
+  text-align: left;
+}
+
+.btn_type {
+  width: 80%;
+  height: 50px;
+  background: #166cea;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
 }
