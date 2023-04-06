@@ -58,7 +58,7 @@ function checkInputValues() {
   }
 
   if (isValid) {
-    window.location.href = 'index.html';
+    window.location.replace('index.html');
   }
 }
 
