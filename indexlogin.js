@@ -38,14 +38,6 @@ function showLoggedInPage() {
   document.getElementById('loggedInPage').style.display = 'block';
 }
 
-function getCookie(name) {
-  const value = '; ' + document.cookie;
-  const parts = value.split('; ' + name + '=');
-  if (parts.length === 2) {
-    return parts.pop().split(';').shift();
-  }
-}
-
 function login() {
   const id = document.getElementById('id').value;
   const pw = document.getElementById('pw').value;
