@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>login</title>
     <link rel="stylesheet" href="login.css">
-    <script src="jquery-3.4.1.js"></script>
+
   </head>
   <body>
     <section class="login-form">
@@ -13,7 +13,7 @@
           <h1 class="blind">사이트 이름</h1>
         </a>
       </div>
-      <form action="">
+      <form action="/login" method="POST">
         <div class="int-area">
           <input
             type="text"
@@ -51,29 +51,8 @@
           <a target="_blank" href="gaip.html" class="find_text">회원가입</a>
         </li>
       </ul>
-      <!--
-      <div class="caption">
-        <a href="">비밀번호 찾기</a>
-      </div>
-      <div class="caption">
-        <a href="">아이디 찾기</a>
-      </div>
-    </section>
-    -->
-<!-- 
-    <script>
-      let id = $('#id');
-      let pw = $('#pw');
-      let btn = $('#btn');
+</section>
 
-      $(btn).on('click', function(){
-        if($(id).val() == "") {
-          $(id).next('label').addClass('warning');
-        }
-        else if($(pw).val() == "") {
-          $(id).next('label').addClass('warning');
-        }
-      })
-    </script> -->
+<script src="login.js"></script>
   </body>
 </html>

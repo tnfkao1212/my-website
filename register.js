@@ -14,7 +14,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/register', (req, res) => {
-  const { id, pw, name, email } = req.body;
+  const id = req.body.id;
+  const pw = req.body.pw;
+  const name = req.body.name;
+  const email = req.body.email;
 
   // 회원가입 정보 저장
   const regist_dat = new Date().toISOString().slice(0, 19).replace('T', ' ');
