@@ -1,13 +1,12 @@
 const express = require('express');
-const mysql = require('mysql');
 const app = express();
-
+const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'tkddn1212!',
   database: 'test',
-  port: '3306',
+  port: 3306,
 });
 
 app.use(express.json());
@@ -28,7 +27,10 @@ app.post('/register', (req, res) => {
     'INSERT INTO test (id, pw, name, email, regist_dat, level, point) VALUES (?, ?, ?, ?, ?, ?, ?)',
     [id, pw, name, email, regist_dat, level, point],
     (error, results, fields) => {
-      if (error) throw error;
+      if (error) {
+        console.log(error);
+        return res.status(500).send('Error');
+      }
       res.status(200).send('Success');
     }
   );

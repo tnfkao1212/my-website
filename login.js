@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const cookieParser = require('cookie-parser');
+const path = require('path');
 
 const app = express();
 
@@ -13,7 +14,7 @@ const connection = mysql.createConnection({
   user: 'root',
   password: 'tkddn1212!',
   database: 'test',
-  port: '3306',
+  port: 3306,
 });
 
 app.post('/login', (req, res) => {
@@ -29,12 +30,20 @@ app.post('/login', (req, res) => {
       if (results.length > 0) {
         res.cookie('user_id', id);
         res.redirect('/index.html');
-        return;
       } else {
         res.status(401).send('Unauthorized');
       }
     }
   );
+});
+
+app.get('/index.html', (req, res) => {
+  const user_id = req.cookies.user_id;
+  if (!user_id) {
+    res.redirect('/login.html');
+  } else {
+    res.sendFile(path.join(__dirname, 'index.html'));
+  }
 });
 
 app.listen(3000, () => {
